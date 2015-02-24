@@ -29,8 +29,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:beagleboneblack
 LIBS:GrayCatLabs
-LIBS:BeagleBoneBlack
 LIBS:UTCape-cache
 EELAYER 27 0
 EELAYER END
@@ -48,10 +48,10 @@ Comment4 ""
 $EndDescr
 Text HLabel 8450 3700 2    60   Output ~ 0
 eCAP0
-Text HLabel 5800 2850 0    60   Input ~ 0
-GPIO1_12
 Text HLabel 7800 4500 2    60   Input ~ 0
-GPIO1_14
+GPIO1_12
+Text HLabel 5850 2850 0    60   Input ~ 0
+GPIO0_26
 $Comp
 L GND #PWR015
 U 1 1 54EE3B7B
@@ -190,13 +190,9 @@ Wire Notes Line
 Wire Notes Line
 	4750 6500 4750 7700
 Text Notes 650  6800 0    60   ~ 0
-1. GPIO1_12 must be set high to enable the astable circuit to test the eCAP.\n   It can be set low when not in use to avoid noise coupling
-Wire Wire Line
-	5800 2850 6150 2850
+1. GPIO0_26 must be set high to enable the astable circuit to test the eCAP.\n   It can be set low when not in use to avoid noise coupling
 Text Notes 4550 1850 0    60   ~ 0
-When GPIO1_14 is high eCAP0 should measure 21kHz, \nwhen GPIO1_14 is low it should measure 36kHz
-Wire Wire Line
-	6150 2850 6150 3000
+When GPIO1_12 is high eCAP0 should measure 21kHz, \nwhen GPIO1_12 is low it should measure 36kHz
 Wire Wire Line
 	6450 2400 6450 3000
 Wire Wire Line
@@ -237,8 +233,6 @@ F 3 "~" H 7200 4500 60  0000 C CNN
 	1    7200 4500
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	7800 4500 7400 4500
 Wire Wire Line
 	7000 4500 6450 4500
 $Bitmap
@@ -793,7 +787,13 @@ B1 FA F3 E2 C5 8B 3A E5 21 E4 E5 E5 6B 1D E4 03 55 59 99 53 52 52 48 8F AB AB AB
 3B BB E6 70 9F 81 3C 8C 31 61 60 60 60 60 68 30 12 97 35 98 81 81 81 81 41 FA 60 8C 09 03 03 03 
 03 43 83 61 8C 09 03 03 03 03 43 83 61 8C 09 03 03 03 03 43 83 61 8C 09 03 03 03 03 43 83 61 03 
 60 D2 64 32 30 30 30 30 34 84 CF 1C 00 A9 00 9C 01 A8 8B 59 19 06 06 06 06 06 E9 E3 33 80 C5 FF 
-07 47 25 A5 D2 E9 03 52 D8 00 00 00 00 49 45 4E 44 AE 42 60 82 76 $EndBitmap
+07 47 25 A5 D2 E9 03 52 D8 00 00 00 00 49 45 4E 44 AE 42 60 82 4A $EndBitmap
 EndData
 $EndBitmap
+Wire Wire Line
+	5850 2850 6150 2850
+Wire Wire Line
+	6150 2850 6150 3000
+Wire Wire Line
+	7400 4500 7800 4500
 $EndSCHEMATC
