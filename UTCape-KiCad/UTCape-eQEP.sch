@@ -38,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 9 9
 Title ""
-Date "24 feb 2015"
+Date "24 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -46,18 +46,14 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 6800 3450 2    60   Output ~ 0
+Text HLabel 7300 3450 2    60   Output ~ 0
 eQEP0_A
-Text HLabel 6800 4500 2    60   Output ~ 0
+Text HLabel 7300 4500 2    60   Output ~ 0
 eQEP0_B
-Text HLabel 4600 3450 0    60   Input ~ 0
-GPIO1_28
 Text HLabel 4600 4500 0    60   Input ~ 0
 GPIO3_17
 Wire Wire Line
-	4600 3450 6800 3450
-Wire Wire Line
-	4600 4500 6800 4500
+	4600 4500 6250 4500
 $Comp
 L TEST_POINT TP15
 U 1 1 54EF9737
@@ -81,10 +77,10 @@ F 3 "" H 5650 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 3150 5650 3450
+	5650 3450 5650 3150
 Connection ~ 5650 3450
 Wire Wire Line
-	5650 4250 5650 4500
+	5650 4500 5650 4250
 Connection ~ 5650 4500
 Text Notes 7350 7550 0    60   ~ 0
 eQEP Unit Test Wiring
@@ -640,7 +636,37 @@ B1 FA F3 E2 C5 8B 3A E5 21 E4 E5 E5 6B 1D E4 03 55 59 99 53 52 52 48 8F AB AB AB
 3B BB E6 70 9F 81 3C 8C 31 61 60 60 60 60 68 30 12 97 35 98 81 81 81 81 41 FA 60 8C 09 03 03 03 
 03 43 83 61 8C 09 03 03 03 03 43 83 61 8C 09 03 03 03 03 43 83 61 8C 09 03 03 03 03 43 83 61 03 
 60 D2 64 32 30 30 30 30 34 84 CF 1C 00 A9 00 9C 01 A8 8B 59 19 06 06 06 06 06 E9 E3 33 80 C5 FF 
-07 47 25 A5 D2 E9 03 52 D8 00 00 00 00 49 45 4E 44 AE 42 60 82 4A $EndBitmap
+07 47 25 A5 D2 E9 03 52 D8 00 00 00 00 49 45 4E 44 AE 42 60 82 CF $EndBitmap
 EndData
 $EndBitmap
+$Comp
+L R R19
+U 1 1 54F66AB7
+P 6500 3450
+F 0 "R19" V 6580 3450 40  0000 C CNN
+F 1 "100" V 6507 3451 40  0000 C CNN
+F 2 "~" V 6430 3450 30  0000 C CNN
+F 3 "~" H 6500 3450 30  0000 C CNN
+	1    6500 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R20
+U 1 1 54F66AD3
+P 6500 4500
+F 0 "R20" V 6580 4500 40  0000 C CNN
+F 1 "100" V 6507 4501 40  0000 C CNN
+F 2 "~" V 6430 4500 30  0000 C CNN
+F 3 "~" H 6500 4500 30  0000 C CNN
+	1    6500 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6750 4500 7300 4500
+Wire Wire Line
+	6750 3450 7300 3450
+Text HLabel 4600 3450 0    60   Input ~ 0
+GPIO0_20
+Wire Wire Line
+	4600 3450 6250 3450
 $EndSCHEMATC

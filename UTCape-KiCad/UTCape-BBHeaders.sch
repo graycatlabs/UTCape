@@ -38,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 8 9
 Title ""
-Date "24 feb 2015"
+Date "24 mar 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -173,8 +173,6 @@ Text HLabel 6750 4550 0    60   Input ~ 0
 AIN2
 Text HLabel 6750 4650 0    60   Input ~ 0
 AIN0
-Text HLabel 10150 3250 2    60   BiDi ~ 0
-GPIO1_28
 Text HLabel 10150 3350 2    60   Output ~ 0
 PWM1A
 Text HLabel 10150 3550 2    60   BiDi ~ 0
@@ -193,8 +191,6 @@ Text HLabel 10150 4150 2    60   Output ~ 0
 SPI1_MOSI
 Text HLabel 10150 4750 2    60   Input ~ 0
 eQEP0_A
-Wire Wire Line
-	10150 3250 9300 3250
 Wire Wire Line
 	9300 3350 10150 3350
 Wire Wire Line
@@ -831,9 +827,13 @@ B1 FA F3 E2 C5 8B 3A E5 21 E4 E5 E5 6B 1D E4 03 55 59 99 53 52 52 48 8F AB AB AB
 3B BB E6 70 9F 81 3C 8C 31 61 60 60 60 60 68 30 12 97 35 98 81 81 81 81 41 FA 60 8C 09 03 03 03 
 03 43 83 61 8C 09 03 03 03 03 43 83 61 8C 09 03 03 03 03 43 83 61 8C 09 03 03 03 03 43 83 61 03 
 60 D2 64 32 30 30 30 30 34 84 CF 1C 00 A9 00 9C 01 A8 8B 59 19 06 06 06 06 06 E9 E3 33 80 C5 FF 
-07 47 25 A5 D2 E9 03 52 D8 00 00 00 00 49 45 4E 44 AE 42 60 82 4A $EndBitmap
+07 47 25 A5 D2 E9 03 52 D8 00 00 00 00 49 45 4E 44 AE 42 60 82 CF $EndBitmap
 EndData
 $EndBitmap
 Text Notes 7350 7550 0    60   ~ 0
 BeagleBone Headers
+Text HLabel 6750 4750 0    60   BiDi ~ 0
+GPIO0_20
+Wire Wire Line
+	6750 4750 7550 4750
 $EndSCHEMATC
